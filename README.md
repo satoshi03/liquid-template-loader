@@ -63,33 +63,90 @@ module.exports = {
 
 ## Usage
 
-### Add filters
+### Add data
+
+```html
+<p>{{ user.name }}</p>
+```
 
 ```js
-options: {
+module.exports = {
   ...
-  filters: {
-    myFilter: input => {
-      return String(input).toUpperCase()
-    }
-  }
-}
+  module: {
+    rules: [
+      {
+        ...
+        use: [
+          {
+            options: {
+              ...
+              data: {
+                user: {
+                    id: 1,
+                    name: 'satoshi',
+                }
+              }
+              ...
+            }
+```
 
+
+
+### Add filters
+
+```html
+<p>{{ 'hello world' | myFilter }}</p>
+```
+
+```js
+module.exports = {
+  ...
+  module: {
+    rules: [
+      {
+        ...
+        use: [
+          {
+            options: {
+              ...
+              filters: {
+                myFilter: input => {
+                  return String(input).toUpperCase()
+                }
+              }
+              ...
+            }
 ```
 
 ### Add tags
 
+```html
+<p>{% MyTag %}</p>
+```
+
 ```js
-options: {
+const Liquid = require('liquid');
+
+module.exports = {
   ...
-  tags: {
-    myTag: class MyTag extends Liquid.Tag {
-      render () {
-        return 'Hello World';
-      }
-    }
-  }
-}
+  module: {
+    rules: [
+      {
+        ...
+        use: [
+          {
+            options: {
+              ...
+              tags: {
+                myTag: class MyTag extends Liquid.Tag {
+                  render () {
+                    return 'Hello World';
+                  }
+                }
+              }
+              ...
+            }
+
 ```
 
 For detail implementaion, you can see https://github.com/docs/liquid/tree/master/lib/liquid/tags.
