@@ -1,6 +1,6 @@
 {
   "name": "liquid-template-loader",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Liquid template loader module for webpack",
   "main": "dist/cjs.js",
   "scripts": {
