@@ -2,7 +2,7 @@
   "name": "liquid-template-loader",
   "version": "0.1.0",
   "description": "Liquid template loader module for webpack",
-  "main": "index.js",
+  "main": "dist/cjs.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src -d dist --copy-files ",
     "test": "ava --verbose"
