@@ -21,7 +21,7 @@ export default async function loader(content) {
 
   // Add filters
   if (typeof options.filters === 'object') {
-    Engine.registerFilters(config.filters);
+    Engine.registerFilters(options.filters);
   }
 
   // Add tags
