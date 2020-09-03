@@ -1,0 +1,54 @@
+{
+  "name": "liquid-template-loader",
+  "version": "0.1.0",
+  "description": "Liquid template loader module for webpack",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel src -d dist --copy-files ",
+    "test": "ava --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/satoshi03/liquid-template-loader.git"
+  },
+  "keywords": [
+    "liquid",
+    "loader",
+    "webpack"
+  ],
+  "author": "Satoshi Innami <innamisatoshi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/satoshi03/liquid-template-loader/issues"
+  },
+  "homepage": "https://github.com/satoshi03/liquid-template-loader#readme",
+  "dependencies": {
+    "liquid": "^5.0.0",
+    "loader-utils": "^2.0.0",
+    "object-assign": "^4.1.1"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "ava": "^3.12.1",
+    "cross-env": "^7.0.2",
+    "html-loader": "^1.3.0",
+    "html-webpack-plugin": "^4.4.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "require": [
+      "@babel/register",
+      "@babel/preset-env"
+    ],
+    "babel": true
+  }
+}
