@@ -63,6 +63,8 @@ module.exports = {
 
 ## Usage
 
+You can specify custome `data`, `filter`, `tag`.
+
 ### Add data
 
 ```html
@@ -83,7 +85,7 @@ module.exports = {
               data: {
                 user: {
                     id: 1,
-                    name: 'satoshi',
+                    name: 'satoshi'
                 }
               }
               ...
