@@ -37,4 +37,6 @@ export default async function loader(content) {
       return (null, result);
     }
   )
-};
+}
+
+export const raw = true;

@@ -12,7 +12,7 @@ To begin, you'll need to install `liquid-template-loader`.
 npm install --save-dev liquid-template-loader
 ```
 
-** index.html **
+**index.html**
 
 ```html
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ npm install --save-dev liquid-template-loader
 </html>
 ```
 
-** webapck.config.js **
+**webapck.config.js**
 
 ```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');

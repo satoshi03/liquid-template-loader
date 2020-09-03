@@ -1,8 +1,8 @@
 import test from 'ava';
-import loader from '../index.js'
+import loader from '../src/index.js'
 
 
-test('test', t => {
-  loader({});
+// TODO: Add test
+test('should pass mock test', t => {
   t.pass()
 })
